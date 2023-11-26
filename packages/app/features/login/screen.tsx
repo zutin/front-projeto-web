@@ -55,10 +55,13 @@
     }
 
     function ButtonHome({ title }) {
+        const loginProps = useLink({
+            href: '/dashboard',
+        })
         return (
-        <Button theme="purple" icon={ArrowBigRight} scaleSpace={0.5} color="white" width={325} height={50}>
-            <Text ta="center" fontWeight="bold" letterSpacing={0.5}>{title}</Text>
-        </Button>
+            <Button theme="purple" {...loginProps} icon={ArrowBigRight} scaleSpace={0.5} color="white" width={325} height={50}>
+                <Text ta="center" fontWeight="bold" letterSpacing={0.5}>{title}</Text>
+            </Button>
         )
     }
     
